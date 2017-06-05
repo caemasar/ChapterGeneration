@@ -23,7 +23,7 @@ public class ChapterGeneration {
 		PrintStream p = new PrintStream(fs);
 		for (int i = min; i <= max; i++) {
 			// for (int i = 1; i <= 1000000; i++) {
-			p.println(number2CN(i));
+			p.println("第" + number2CN(i) + "章\n\n");
 		}
 		p.close();
 
