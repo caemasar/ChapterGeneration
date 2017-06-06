@@ -56,7 +56,7 @@ public class ClassPoolUtils {
         return c;  
     }  
   
-    public static void main(String[] args) {       
-          ClassPoolUtils.tableMapping("com.andy.model.Order", "order1");  
-    }  
+//    public static void main(String[] args) {       
+//          ClassPoolUtils.tableMapping("com.andy.model.Order", "order1");  
+//    }  
 }

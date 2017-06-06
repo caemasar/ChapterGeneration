@@ -218,9 +218,9 @@ public class test {
 		}
 	}
 
-	public static void main(String[] args) {
-		TestNumToChn();
-		System.out.println("--------------------------------------------------------");
-		TestChnStringToNumber();
-	}
+//	public static void main(String[] args) {
+//		TestNumToChn();
+//		System.out.println("--------------------------------------------------------");
+//		TestChnStringToNumber();
+//	}
 }
