@@ -17,35 +17,45 @@ public class ChapterGeneration {
 		String tamp = new String();
 		String prefix = new String();
 		String suffix = new String();
-		System.out.println("输入初始数：");
+		System.out.print("\t输入初始数：\n\t");
 		Scanner scanner = new Scanner(System.in);
 		int min = scanner.nextInt();
-		System.out.println("输入结束数：");
+		System.out.print("\t输入结束数：\n\t");
 		int max = scanner.nextInt();
-		System.out.println("输入前缀：");
-		tamp = scanner.next();
+		tamp = scanner.nextLine();
+		System.out.print("\t输入前缀：\n\t");
+		tamp = scanner.nextLine();
 		if ("".equals(tamp)) {
 			prefix = "第";
 		} else {
 			prefix = tamp;
 		}
 		tamp = "";
-		System.out.println("输入后缀：");
-		tamp = scanner.next();
+		System.out.print("\t输入后缀：\n\t");
+		tamp = scanner.nextLine();
 		if ("".equals(tamp)) {
 			suffix = "章";
 		} else {
 			suffix = tamp;
 		}
-		FileOutputStream fs = new FileOutputStream(new File("D:\\text.txt"));
-		PrintStream p = new PrintStream(fs);
-		for (int i = min; i <= max; i++) {
-			// for (int i = 1; i <= 1000000; i++) {
-			// p.println(prefix + number2CN(i) + suffix + "\n\n");
-			System.out.println(prefix + number2CN(i) + suffix + "\n\n");
-		}
-		p.close();
+		System.out.println("请选择输出方式：\n1.输出到控制台\t2.输出到文件D:\\text.txt");
+		int choose = scanner.nextInt();
+		System.out.println("----------开始----------");
+		if (choose == 1) {
+			for (int i = min; i <= max; i++) {
+				System.out.println(prefix + number2CN(i) + suffix + "\n\n");
+			}
+		} else {
+			FileOutputStream fs = new FileOutputStream(new File("D:\\text.txt"));
+			PrintStream p = new PrintStream(fs);
 
+			for (int i = min; i <= max; i++) {
+				// for (int i = 1; i <= 1000000; i++) {
+				p.println(prefix + number2CN(i) + suffix + "\n\n");
+			}
+			p.close();
+		}
+		System.out.println("----------结束----------");
 		// System.out.println(toChineseNumerals(192342).charAt(5));
 		// System.out.println(toChineseNumerals(192342));
 		// System.out.println(initCHN_UNITOfDigits(countNumberOfDigits(192342)));
