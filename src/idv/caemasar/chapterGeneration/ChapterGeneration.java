@@ -14,16 +14,35 @@ public class ChapterGeneration {
 
 	public static void main(String[] args) throws FileNotFoundException {
 
+		String tamp = new String();
+		String prefix = new String();
+		String suffix = new String();
 		System.out.println("输入初始数：");
 		Scanner scanner = new Scanner(System.in);
 		int min = scanner.nextInt();
 		System.out.println("输入结束数：");
 		int max = scanner.nextInt();
+		System.out.println("输入前缀：");
+		tamp = scanner.next();
+		if ("".equals(tamp)) {
+			prefix = "第";
+		} else {
+			prefix = tamp;
+		}
+		tamp = "";
+		System.out.println("输入后缀：");
+		tamp = scanner.next();
+		if ("".equals(tamp)) {
+			suffix = "章";
+		} else {
+			suffix = tamp;
+		}
 		FileOutputStream fs = new FileOutputStream(new File("D:\\text.txt"));
 		PrintStream p = new PrintStream(fs);
 		for (int i = min; i <= max; i++) {
 			// for (int i = 1; i <= 1000000; i++) {
-			p.println("第" + number2CN(i) + "章\n\n");
+			// p.println(prefix + number2CN(i) + suffix + "\n\n");
+			System.out.println(prefix + number2CN(i) + suffix + "\n\n");
 		}
 		p.close();
 

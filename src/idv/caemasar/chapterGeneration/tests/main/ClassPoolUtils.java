@@ -46,9 +46,9 @@ public class ClassPoolUtils {
             System.out.println("增强后Entity001:" + clazz.getAnnotation(Entity.class));  
             System.out.println("增强后Table002:" + clazz.getAnnotation(Table.class));  
             //TODO 当前ClassLoader中必须尚未加载该实体。（同一个ClassLoader加载同一个类只会加载一次）  
-            c = clazz.toClass();  
-            System.out.println("增强后toClass-Entity0001:" + c.getAnnotation((Class<A>) Entity.class));  
-            System.out.println("增强后toClass-Table0002:" + c.getAnnotation((Class<A>) Table.class));  
+//            c = clazz.toClass();  
+//            System.out.println("增强后toClass-Entity0001:" + c.getAnnotation(Entity.class));  
+//            System.out.println("增强后toClass-Table0002:" + c.getAnnotation(Table.class));  
         } catch (Exception e) {  
             e.printStackTrace();  
         }  
