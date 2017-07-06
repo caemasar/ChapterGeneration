@@ -17,13 +17,13 @@ public class ChapterGeneration {
 		String tamp = new String();
 		String prefix = new String();
 		String suffix = new String();
-		System.out.print("\t输入初始数：\n\t");
+		System.out.print("----输入初始数：-----\n<======");
 		Scanner scanner = new Scanner(System.in);
 		int min = scanner.nextInt();
-		System.out.print("\t输入结束数：\n\t");
+		System.out.print("----输入结束数：-----\n<======");
 		int max = scanner.nextInt();
 		tamp = scanner.nextLine();
-		System.out.print("\t输入前缀：\n\t");
+		System.out.print("----输入前缀：-----\n<======");
 		tamp = scanner.nextLine();
 		if ("".equals(tamp)) {
 			prefix = "第";
@@ -31,22 +31,22 @@ public class ChapterGeneration {
 			prefix = tamp;
 		}
 		tamp = "";
-		System.out.print("\t输入后缀：\n\t");
+		System.out.print("----输入后缀：-----\n<======");
 		tamp = scanner.nextLine();
 		if ("".equals(tamp)) {
 			suffix = "章";
 		} else {
 			suffix = tamp;
 		}
-		System.out.println("请选择输出方式：\n1.输出到控制台\t2.输出到文件D:\\text.txt");
+		System.out.print("----请选择输出方式：\n----1.输出到控制台-----\n----2.输出到文件D:\\ChapterGeneration.txt-----\n<======");
 		int choose = scanner.nextInt();
-		System.out.println("----------开始----------");
+		System.out.println("----------开始----------\n");
 		if (choose == 1) {
 			for (int i = min; i <= max; i++) {
 				System.out.println(prefix + number2CN(i) + suffix + "\n\n");
 			}
 		} else {
-			FileOutputStream fs = new FileOutputStream(new File("D:\\text.txt"));
+			FileOutputStream fs = new FileOutputStream(new File("D:\\ChapterGeneration.txt"));
 			PrintStream p = new PrintStream(fs);
 
 			for (int i = min; i <= max; i++) {
