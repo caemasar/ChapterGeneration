@@ -1,1 +1,21 @@
-/bin/
+# Maven
+target/
+logs/
+release.properties
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+
+# Eclipse
+.classpath
+#.project
+.externalToolBuilders/
+.metadata
+
+.settings/
+.idea/
+
+# gitignore
+.mymetadata
