@@ -14,5 +14,6 @@ public class HelloWorld1 {
         System.out.println("HelloWorld1,again!");
         System.out.println("Bye,World1~");
         //这个分支idea再提交后看结果
+        //这里idea要通过rebase才能切换分支，换到idea分支，尝试更改看看效果
     }
 }
