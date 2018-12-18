@@ -43,7 +43,7 @@ public class ChapterGeneration {
 		System.out.println("----------开始----------\n");
 		if (choose == 1) {
 			for (int i = min; i <= max; i++) {
-				System.out.println(prefix + number2CN(i) + suffix + "\n\n");
+				System.out.println(prefix + number2CN(i) + suffix + " \n\n");
 			}
 		} else {
 			FileOutputStream fs = new FileOutputStream(new File("D:\\ChapterGeneration.txt"));
@@ -51,7 +51,7 @@ public class ChapterGeneration {
 
 			for (int i = min; i <= max; i++) {
 				// for (int i = 1; i <= 1000000; i++) {
-				p.println(prefix + number2CN(i) + suffix + "\n\n");
+				p.println(prefix + number2CN(i) + suffix + " \n\n");
 			}
 			p.close();
 		}
